@@ -1,0 +1,40 @@
+version: "3.7"
+services:
+  lint:
+    build:
+      context: .
+      target: development
+    command: npm run lint
+    volumes:
+      - type: bind
+        source: ./src
+        target: /code/src
+        read_only: true
+  npm:
+    build:
+      context: .
+      target: development
+    entrypoint: npm
+    command: ls
+    volumes:
+      - type: bind
+        source: .
+        target: /code
+  npx:
+    build:
+      context: .
+      target: development
+    command: --help
+    entrypoint: npx
+    volumes:
+      - type: bind
+        source: .
+        target: /code
+  psql:
+    image: returnpath/psql
+    command: /usr/bin/psql -P pager=off -P x=auto
+    entrypoint: ""
+    volumes:
+      - ./.psql_history:/root/.psql_history
+    environment:
+      PGHOST: db

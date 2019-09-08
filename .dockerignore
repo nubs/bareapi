@@ -1,0 +1,11 @@
+/.git/
+/dist/
+/node_modules/
+/.dockerignore
+/.gitignore
+/.psql_history
+/Dockerfile
+/docker-compose.override.yml
+/docker-compose.override.yml.example
+/docker-compose.utilities.yml
+/docker-compose.yml

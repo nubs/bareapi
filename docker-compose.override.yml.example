@@ -1,0 +1,29 @@
+version: "3.7"
+services:
+  api:
+    environment:
+      API_CORS_ALLOWED_ORIGINS: http://localhost:3000
+      API_DB_URL: postgres://postgres:superuserpassword@db/api
+      API_ENABLE_INTROSPECTION: "true"
+      API_ENABLE_PLAYGROUND: "true"
+      API_ENABLE_TRACING: "true"
+      FORCE_COLOR: "1"
+      LOG_COLORS: "true"
+      LOG_LEVEL: debug
+  db:
+    environment:
+      POSTGRES_DB: api
+      POSTGRES_PASSWORD: superuserpassword
+      POSTGRES_USER: postgres
+  npx:
+    environment:
+      API_DB_URL: postgres://postgres:superuserpassword@db/api
+  pgadmin:
+    environment:
+      PGADMIN_DEFAULT_EMAIL:
+      PGADMIN_DEFAULT_PASSWORD:
+  psql:
+    environment:
+      PGDATABASE: api
+      PGPASSWORD: superuserpassword
+      PGUSER: postgres

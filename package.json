@@ -1,0 +1,51 @@
+{
+  "name": "bareapi",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A barebones GraphQL API.",
+  "scripts": {
+    "build:dist": "babel src --out-dir dist --copy-files",
+    "lint": "eslint src",
+    "start": "babel-watch src",
+    "start:dist": "node dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nubs/bareapi"
+  },
+  "homepage": "https://github.com/nubs/bareapi",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/polyfill": "^7.6.0",
+    "@graphql-modules/core": "^0.7.11",
+    "@graphql-modules/di": "^0.7.11",
+    "apollo-server-express": "^2.9.3",
+    "blocked": "^1.2.1",
+    "cls-hooked": "^4.2.2",
+    "colors": "^1.3.3",
+    "convert-hrtime": "^3.0.0",
+    "cors": "^2.8.5",
+    "dataloader": "^1.4.0",
+    "express": "^4.17.1",
+    "graphql": "^14.5.4",
+    "graphql-import-node": "0.0.4",
+    "graphql-tag-pluck": "^0.8.4",
+    "lodash": "^4.17.15",
+    "pg": "^7.12.1",
+    "reflect-metadata": "^0.1.13",
+    "sequelize": "^5.18.2",
+    "serialize-error": "^4.1.0",
+    "uuid": "^3.3.3",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "babel-watch": "^7.0.0",
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "sequelize-cli": "^5.5.1"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "development": {
+    "migrationStorageTableName": "sequelize_meta",
+    "migrationStorageTableSchema": "sequelize_schema",
+    "use_env_variable": "API_DB_URL"
+  },
+  "test": {
+    "migrationStorageTableName": "sequelize_meta",
+    "migrationStorageTableSchema": "sequelize_schema",
+    "use_env_variable": "API_DB_URL"
+  },
+  "production": {
+    "migrationStorageTableName": "sequelize_meta",
+    "migrationStorageTableSchema": "sequelize_schema",
+    "use_env_variable": "API_DB_URL"
+  }
+}

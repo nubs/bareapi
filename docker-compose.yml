@@ -1,0 +1,44 @@
+version: "3.7"
+services:
+  api:
+    build:
+      context: .
+      target: development
+    ports:
+      - target: ${API_PORT:-4001}
+        published: ${API_PORT:-4001}
+    depends_on:
+      - db
+    restart: always
+    volumes:
+      - type: bind
+        source: ./src
+        target: /code/src
+    environment:
+      API_PORT: ${API_PORT:-4001}
+  db:
+    image: postgres:10.6-alpine
+    ports:
+      - target: 5432
+        published: ${POSTGRES_PORT:-5432}
+    restart: always
+  npx:
+    image: busybox
+    entrypoint: ""
+    command: tail -f /dev/null
+    init: true
+    restart: always
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - target: 80
+        published: ${PGADMIN_PORT:-5430}
+    depends_on:
+      - db
+    restart: always
+  psql:
+    image: busybox
+    entrypoint: ""
+    command: tail -f /dev/null
+    init: true
+    restart: always

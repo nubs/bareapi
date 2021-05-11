@@ -30,7 +30,7 @@
     "graphql": "^14.5.4",
     "graphql-import-node": "0.0.4",
     "graphql-tag-pluck": "^0.8.4",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "pg": "^7.12.1",
     "reflect-metadata": "^0.1.13",
     "sequelize": "^5.18.2",
